@@ -24,6 +24,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       display: block;
+      cursor: pointer;
     }
     /* متن overlay داخل ویدیو */
     .overlay {
@@ -47,14 +48,23 @@
 <body>
 
   <div class="video-container">
-    <video id="myVideo" controls autoplay loop playsinline>
+    <video id="myVideo" controls autoplay loop playsinline muted>
       <source src="-2147483648_-210645.mp4" type="video/mp4">
       مرورگر شما ویدیو را پشتیبانی نمی‌کند.
     </video>
     <div class="overlay">radmehrsite.ir/rostami</div>
   </div>
 
-  <div class="footer">© radmehrsite.ir/rostami</div>
+  <div class="footer">© طراحی شده توسط رادمهر محمدی</div>
+
+  <script>
+    const video = document.getElementById('myVideo');
+
+    // با کلیک روی ویدیو، صدا فعال می‌شود
+    video.addEventListener('click', () => {
+      video.muted = false;
+    });
+  </script>
 
 </body>
 </html>
