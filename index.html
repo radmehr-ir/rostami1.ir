@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ختم رستمی</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Vazirmatn, sans-serif;
+    }
+    video {
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="myVideo" controls autoplay>
+    <source src="video.mp4" type="video/mp4">
+    مرورگر شما ویدیو را پشتیبانی نمی‌کند.
+  </video>
+
+  <div class="footer">ساخته شده توسط رادمهر محمدی</div>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    
+    // فعال کردن پخش خودکار با صدا (در بعضی مرورگرها ممکنه محدودیت داشته باشه)
+    video.muted = false; 
+    video.play().catch(() => {
+      // اگر مرورگر پخش خودکار با صدا رو بلاک کرد، صدا را بعد از کلیک فعال کن
+      video.muted = true;
+      video.play();
+      video.addEventListener('click', () => {
+        video.muted = false;
+      });
+    });
+  </script>
+
+</body>
+</html>
