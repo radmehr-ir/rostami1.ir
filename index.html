@@ -8,83 +8,14 @@
     body {
       margin: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f9f9f9;
-      font-family: Vazirmatn, sans-serif;
-      position: relative;
-    }<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ختم رستمی</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       background-color: #f9f9f9;
       font-family: Vazirmatn, sans-serif;
-    }
-    .video-container {
       position: relative;
-      width: 400px; /* اندازه جمع‌وجور */
     }
-    video {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      display: block;
-      cursor: pointer;
-    }
-    /* متن overlay داخل ویدیو */
-    .overlay {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background-color: rgba(0,0,0,0.5);
-      color: #fff;
-      padding: 3px 8px;
-      font-size: 12px;
-      border-radius: 5px;
-      pointer-events: none;
-    }
-    .footer {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="video-container">
-    <video id="myVideo" controls autoplay loop playsinline muted>
-      <source src="-2147483648_-210645.mp4" type="video/mp4">
-      مرورگر شما ویدیو را پشتیبانی نمی‌کند.
-    </video>
-    <div class="overlay">radmehrsite.ir/rostami</div>
-  </div>
-
-  <div class="footer">© طراحی شده توسط رادمهر محمدی</div>
-
-  <script>
-    const video = document.getElementById('myVideo');
-
-    // با کلیک روی ویدیو، صدا فعال می‌شود
-    video.addEventListener('click', () => {
-      video.muted = false;
-    });
-  </script>
-
-</body>
-</html>
-
     video {
       width: 100%;
       max-width: 600px;
