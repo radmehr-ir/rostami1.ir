@@ -13,40 +13,28 @@
       align-items: center;
       min-height: 100vh;
       background-color: #f9f9f9;
-      font-family: Vazirmatn, sans-serif;
     }
     video {
-      width: 400px; /* اندازه کوچک */
+      width: 400px; /* اندازه جمع‌وجور */
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-    .footer {
-      margin-top: 15px;
+    .copyright {
+      margin-top: 10px;
       font-size: 14px;
       color: #555;
+      font-family: Vazirmatn, sans-serif;
     }
   </style>
 </head>
 <body>
 
-  <video id="myVideo" autoplay playsinline>
+  <video autoplay loop playsinline muted>
     <source src="-2147483648_-210645.mp4" type="video/mp4">
     مرورگر شما ویدیو را پشتیبانی نمی‌کند.
   </video>
 
-  <div class="footer">ساخته شده توسط رادمهر محمدی</div>
-
-  <script>
-    const video = document.getElementById('myVideo');
-
-    // ویدیو را فوراً با صدا پخش کن
-    video.muted = false;
-    video.play().catch(() => {
-      // اگر مرورگر پخش خودکار با صدا را بلاک کرد
-      // در اکثر مرورگرها، بدون interaction امکان پخش صدا نیست
-      console.warn("پخش خودکار با صدا ممکن است در مرورگر شما بلاک شود");
-    });
-  </script>
+  <div class="copyright">© radmehrsite.ir/rostami</div>
 
 </body>
 </html>
