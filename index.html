@@ -8,22 +8,6 @@
     body {
       margin: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f9f9f9;
-      font-family: Vazirmatn, sans-serif;
-      position: relative;
-    }<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ختم رستمی</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -79,67 +63,6 @@
     // با کلیک روی ویدیو، صدا فعال می‌شود
     video.addEventListener('click', () => {
       video.muted = false;
-    });
-  </script>
-
-</body>
-</html>
-
-    video {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    #playBtn {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: #28a745;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      display: none; /* اول مخفی است */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    #playBtn:hover {
-      background-color: #218838;
-    }
-    .footer {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #555;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <video id="myVideo" autoplay loop playsinline muted>
-    <source src="-2147483648_-210645.mp4" type="video/mp4">
-    مرورگر شما ویدیو را پشتیبانی نمی‌کند.
-  </video>
-
-  <button id="playBtn">ورود به بازی رستمی</button>
-
-  <div class="footer">© طراحی شده توسط رادمهر محمدی</div>
-
-  <script>
-    const playBtn = document.getElementById('playBtn');
-
-    // بعد از 5 ثانیه، دکمه نمایش داده شود
-    setTimeout(() => {
-      playBtn.style.display = 'block';
-    }, 5000);
-
-    // کلیک روی دکمه → رفتن به صفحه بازی
-    playBtn.addEventListener('click', () => {
-      window.location.href = 'https://radmehr-ir.github.io/bazi/';
     });
   </script>
 
