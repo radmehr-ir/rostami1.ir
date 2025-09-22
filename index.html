@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ویدیو خودکار</title>
+  <title>ختم رستمی</title>
   <style>
     body {
       margin: 0;
@@ -16,20 +16,20 @@
       font-family: Vazirmatn, sans-serif;
     }
     video {
-      max-width: 90%;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      width: 400px; /* اندازه کوچک */
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .footer {
-      margin-top: 20px;
-      font-size: 16px;
+      margin-top: 15px;
+      font-size: 14px;
       color: #555;
     }
   </style>
 </head>
 <body>
 
-  <video id="myVideo" controls autoplay>
+  <video id="myVideo" autoplay playsinline>
     <source src="-2147483648_-210645.mp4" type="video/mp4">
     مرورگر شما ویدیو را پشتیبانی نمی‌کند.
   </video>
@@ -38,16 +38,13 @@
 
   <script>
     const video = document.getElementById('myVideo');
-    
-    // سعی برای پخش خودکار با صدا
+
+    // ویدیو را فوراً با صدا پخش کن
     video.muted = false;
     video.play().catch(() => {
       // اگر مرورگر پخش خودکار با صدا را بلاک کرد
-      video.muted = true;
-      video.play();
-      video.addEventListener('click', () => {
-        video.muted = false;
-      });
+      // در اکثر مرورگرها، بدون interaction امکان پخش صدا نیست
+      console.warn("پخش خودکار با صدا ممکن است در مرورگر شما بلاک شود");
     });
   </script>
 
